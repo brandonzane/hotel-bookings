@@ -15,6 +15,10 @@ const style = {
   searchWrapper: `flex items-center rounded-full py-2 md:border-2`,
   searchIcon: `hidden h-8 cursor-pointer rounded-full bg-blue-300 p-2 text-white md:mx-2 md:inline-flex`,
   searchInput: `flex-grow bg-transparent pl-5 placeholder-gray-400 outline-none`,
+  menuWrapper: `flex items-center justify-end space-x-4 text-gray-500`,
+  paragraph: `hidden cursor-pointer md:inline`,
+  menuItems: `flex items-center space-x-2 rounded-full border-2 p-2`,
+
   globeAltIcon: `h-6 cursor-pointer`,
 }
 
@@ -42,11 +46,11 @@ function Header() {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center justify-end space-x-4 text-gray-500">
-        <p className="hidden cursor-pointer md:inline">Join Us</p>
+      <div className={style.menuWrapper}>
+        <p className={style.paragraph}>Join Us</p>
         <GlobeAltIcon className={style.globeAltIcon} />
 
-        <div className="flex items-center space-x-2 rounded-full border-2 p-2">
+        <div className={style.menuItems}>
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />
         </div>
