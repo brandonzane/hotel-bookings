@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Banner from '../components/Banner'
+import Head from "next/head"
+import Header from "../components/Header"
+import Banner from "../components/Banner"
 
 export default function Home({ exploreData }) {
   return (
@@ -18,8 +18,13 @@ export default function Home({ exploreData }) {
           <h2 className="pb-5 text-4xl font-semibold">Explore Nearby</h2>
 
           {/* Pull data from server */}
-          {exploreData?.map((item) => (
-            <h1>{item.location}</h1>
+          {exploreData?.map(({ img, distance, location }) => (
+            <SmallCard
+              key={img}
+              img={img}
+              distance={distance}
+              location={location}
+            />
           ))}
         </section>
       </main>
@@ -28,7 +33,7 @@ export default function Home({ exploreData }) {
 }
 
 export async function gerStaticProps() {
-  const exploreData = await fetch('https://links.papareact.com/pyp').then(
+  const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   )
 
