@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import bannerImage from "../assets/restaurant-exterior.jpg"
+import bannerImage from "../assets/banner4.jpg"
 
 const style = {
   image: `relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]`,
