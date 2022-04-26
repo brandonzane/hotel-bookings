@@ -1,13 +1,13 @@
-import React from 'react'
-import Image from 'next/image'
-import Logo from '../assets/k-logo.png'
+import React from "react"
+import Image from "next/image"
+import Logo from "../assets/k-logo.png"
 import {
   SearchIcon,
   GlobeAltIcon,
   MenuIcon,
   UserCircleIcon,
   UsersIcon,
-} from '@heroicons/react/solid'
+} from "@heroicons/react/solid"
 
 const style = {
   header: `sticky top-0 z-50 grid grid-cols-3 bg-white p-5 py-5 px-5 shadow-md md:px-10`,
@@ -18,8 +18,7 @@ const style = {
   menuWrapper: `flex items-center justify-end space-x-4 text-gray-500`,
   paragraph: `hidden cursor-pointer md:inline`,
   menuItems: `flex items-center space-x-2 rounded-full border-2 p-2`,
-
-  globeAltIcon: `h-6 cursor-pointer`,
+  globeAltIcon: `h-6 cursor-pointer hover:animate-spin`,
 }
 
 function Header() {
